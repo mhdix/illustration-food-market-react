@@ -1,13 +1,79 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --primary-light-bg: #8EC5FC;
+  --primary-light-gradient: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+  --text-light: #2b2b2b;
+
+  /* dark mode */
+  --primary-dark-bg: #181a1b;
+  --text-dark: #d1cdc7;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* light mode */
+.bg-light {
+  background-color: var(--primary-light-bg);
+  background-image: var(--primary-light-gradient);
+}
+
+.text-light {
+  color: var(--text-light);
+}
+
+/* scroll touch */
+.scroll-touch {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* based */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+button {
+  padding: 5px 10px;
+  outline: 0;
+  border: 0;
+  border-radius: 6px !important;
+  transition: .4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+button:active {
+  transform: scale(0.9) !important;
+
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+button.add-to-card {
+  margin-top: 20px;
+}
+
+ul,
+li {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--text-dark);
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-track {
+  background-color: var(--primary-dark-bg);
+  width: 5px;
+  height: 5px;
+
 }

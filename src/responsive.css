@@ -1,0 +1,117 @@
+@media only screen and (min-width: 1400px) {
+
+    .container-c {
+        width: 1140px;
+        padding: 0 1.2rem;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+
+    .container-c {
+        width: 1140px;
+        padding: 0 1.2rem;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .container-c {
+        width: 960px;
+        padding: 0 1.2rem;
+        margin: 0 auto;
+    }
+
+    .menu ul li {
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+    }
+
+}
+
+@media only screen and (max-width: 992px) {
+
+    .container-c {
+        width: 720px;
+        padding: 0 1.2rem;
+        margin: 0 auto;
+    }
+
+    .menu {
+        background-color: rgb(19, 19, 19) !important;
+        display: flex;
+        justify-content: center;
+        align-items: end;
+        z-index: 3;
+        height: auto;
+        bottom: 0;
+        top: auto;
+        border-radius: 25px 25px 0 0;
+        -webkit-border-radius: 25px 25px 0 0;
+        -moz-border-radius: 25px 25px 0 0;
+        -ms-border-radius: 25px 25px 0 0;
+        -o-border-radius: 25px 25px 0 0;
+        width: 100%;
+        padding: 10px;
+        scroll-behavior: smooth;
+        overflow-x: scroll;
+
+    }
+
+    .menu ul {
+        display: flex;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .menu ul li {
+        margin-bottom: 0 !important;
+    }
+
+    .menu ul a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: var(--text-white);
+    }
+
+    .menu-close {
+        display: none !important;
+    }
+
+    .open-menu {
+        display: none;
+    }
+
+    .cart-badge,
+    .wish-list-badge {
+        top: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+
+    .container-c {
+        width: 540px;
+        padding: 0 1.2rem;
+        margin: 0 auto;
+    }
+    /*  */
+    .cart-detail_box{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .container-c {
+        width: 100%;
+        padding: 0 1.2rem;
+        margin: 0 auto;
+    }
+
+}
+
+@media only screen and (max-width:327px) {}

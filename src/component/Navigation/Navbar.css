@@ -1,0 +1,252 @@
+.menu ::-webkit-scrollbar,
+.menu ::-webkit-scrollbar-track {
+    display: none;
+}
+
+
+.menu_quantity {
+    color: white;
+    background-color: rgb(58, 58, 58);
+    padding: 0 5px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+.menu-item-delete {
+    color: whitesmoke;
+    background-color: rgb(128, 45, 45);
+    padding: 0 5px;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+.menu-close li {
+    padding: 15px 0 !important;
+}
+
+.open-menu {
+    background-color: #444444;
+    width: fit-content;
+    padding: 5px 10px;
+    z-index: 5;
+    position: fixed;
+    left: 0;
+    top: 50%;
+    transform: translate(-33%, -50%) rotate(90deg);
+    border-radius: 10px 10px 0 0;
+    cursor: pointer;
+    -webkit-transform: translate(-33%, -50%) rotate(90deg);
+    -moz-transform: translate(-33%, -50%) rotate(90deg);
+    -ms-transform: translate(-33%, -50%) rotate(90deg);
+    -o-transform: translate(-33%, -50%) rotate(90deg);
+}
+
+.open-menu:hover {
+    transform: translate(-33%, -50%) rotate(90deg) scale(1.06);
+    -webkit-transform: translate(-33%, -50%) rotate(90deg) scale(1.06);
+    -moz-transform: translate(-33%, -50%) rotate(90deg) scale(1.06);
+    -ms-transform: translate(-33%, -50%) rotate(90deg) scale(1.06);
+    -o-transform: translate(-33%, -50%) rotate(90deg) scale(1.06);
+}
+
+.cart-badge,
+.wish-list-badge {
+    position: absolute;
+    right: 17px;
+    top: -10px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    background-color: rgb(76, 76, 179);
+}
+
+.wish-list-badge {
+    background-color: rgb(220, 82, 82);
+}
+
+.dark-mode {
+    margin: 0 0 10px 50px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.dark-mode img {
+    width: 6.4rem;
+    height: auto;
+    float: right;
+    margin-bottom: 0.75rem;
+}
+
+.dark-mode h3 {
+    text-align: right;
+    margin-bottom: 0.75rem;
+    clear: both;
+}
+
+label,
+.btn-bubble {
+    display: block;
+    /* position: absolute; */
+    -webkit-tap-highlight-color: transparent;
+}
+
+label {
+    animation: float 4s ease-in-out infinite;
+}
+
+.btn-bubble,
+.btn-bubble:before,
+.btn-bubble:after {
+    transition-duration: 0.2s;
+}
+
+.btn-bubble,
+.btn-bubble:after {
+    border-radius: 50%;
+}
+
+.btn-bubble {
+    background-image:
+        radial-gradient(8% 8% at 22% 28%, hsl(0, 0%, 100%) 45%, hsla(0, 0%, 100%, 0) 50%),
+        radial-gradient(8% 8% at 23% 27%, hsl(0, 0%, 100%) 45%, hsla(0, 0%, 100%, 0) 50%),
+        radial-gradient(8% 8% at 24% 26%, hsl(0, 0%, 100%) 45%, hsla(0, 0%, 100%, 0) 50%),
+        radial-gradient(8% 8% at 25% 25%, hsl(0, 0%, 100%) 45%, hsla(0, 0%, 100%, 0) 50%),
+        radial-gradient(8% 8% at 26% 24%, hsl(0, 0%, 100%) 45%, hsla(0, 0%, 100%, 0) 50%),
+        radial-gradient(8% 8% at 27% 23%, hsl(0, 0%, 100%) 45%, hsla(0, 0%, 100%, 0) 50%),
+        radial-gradient(8% 8% at 28% 22%, hsl(0, 0%, 100%) 45%, hsla(0, 0%, 100%, 0) 50%);
+    box-shadow:
+        0 -0.06em 0.1em hsl(0, 90%, 100%) inset,
+        0 -0.15em 0.4em hsl(0, 90%, 45%) inset,
+        0 0.05em 0.05em hsl(0, 90%, 45%) inset,
+        0.05em 0 0.1em hsl(0, 90%, 100%) inset,
+        -0.05em 0 0.1em hsl(0, 90%, 100%) inset,
+        0 0.1em 0.4em hsl(0, 90%, 60%) inset;
+    cursor: pointer;
+    position: relative;
+    width: 3em;
+    height: 3em;
+    transform-style: preserve-3d;
+    transition-property: box-shadow, transform, width, height;
+    transition-timing-function: ease-in-out, ease-in-out, var(--bubbleTiming), var(--bubbleTiming);
+    will-change: transform;
+    -webkit-appearance: none;
+    appearance: none;
+    z-index: 0;
+}
+
+.btn-bubble:before,
+.btn-bubble:after {
+    content: "";
+    display: block;
+    position: absolute;
+    transition-timing-function: var(--bubbleTiming);
+}
+
+.btn-bubble:before {
+    border-radius: 0.75em;
+    box-shadow:
+        0 0 0 0.5em hsl(0, 0%, 100%) inset;
+    filter: drop-shadow(0.6em 0.6em 4px hsla(0, 0%, 0%, 0.2));
+    top: 50%;
+    left: 50%;
+    width: 1.5em;
+    height: 1.5em;
+    transform: translate3d(-50%, -50%, -1px);
+    z-index: -1;
+}
+
+.btn-bubble:after {
+    background:
+        radial-gradient(100% 100% at center, hsla(0, 0%, 0%, 0) 35%, hsla(0, 0%, 0%, 0.2) 48%, hsla(0, 0%, 0%, 0) 50%);
+    filter: blur(4px);
+    top: 0.6em;
+    left: 0.6em;
+    width: 100%;
+    height: 100%;
+    transform: translate3d(0, 0, -1px);
+    z-index: -2;
+}
+
+.btn-bubble:focus,
+.btn-bubble:hover {
+    transform: scale(1.1);
+    outline: none;
+}
+
+.btn-bubble:focus:active,
+.btn-bubble:hover:active {
+    width: 3.6em;
+    height: 2.4em;
+}
+
+.btn-bubble:focus:before,
+.btn-bubble:hover:before {
+    filter: drop-shadow(0.75em 0.75em 4px hsla(0, 0%, 0%, 0.2));
+}
+
+.btn-bubble:focus:after,
+.btn-bubble:hover:after {
+    transform: translate3d(0.15em, 0.15em, -1px);
+}
+
+.btn-bubble:checked {
+    box-shadow:
+        0 -0.06em 0.1em hsl(120, 90%, 100%) inset,
+        0 -0.15em 0.4em hsl(120, 90%, 45%) inset,
+        0 0.05em 0.05em hsl(120, 90%, 45%) inset,
+        0.05em 0 0.1em hsl(120, 90%, 100%) inset,
+        -0.05em 0 0.1em hsl(120, 90%, 100%) inset,
+        0 0.1em 0.4em hsl(120, 90%, 60%) inset;
+}
+
+
+.btn-bubble:checked:before {
+    border-radius: 0.25em;
+    width: 0.5em;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    label {
+        animation: none;
+    }
+
+    .btn-bubble,
+    .btn-bubble:before,
+    .btn-bubble:after {
+        transition-duration: 0s;
+    }
+
+    .btn-bubble:focus,
+    .btn-bubble:hover {
+        transform: scale(1);
+    }
+
+    .btn-bubble:focus:active,
+    .btn-bubble:hover:active {
+        width: 3em;
+        height: 3em;
+    }
+
+    .btn-bubble:focus:before,
+    .btn-bubble:hover:before {
+        filter: drop-shadow(0.6em 0.6em 4px hsla(0, 0%, 0%, 0.2));
+    }
+
+    .btn-bubble:focus:after,
+    .btn-bubble:hover:after {
+        transform: translate3d(0, 0, -1px);
+    }
+}
